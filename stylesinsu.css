@@ -1,0 +1,108 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #C5FFF8;
+            text-align: center; 
+        }
+
+        header {
+            background-color: #5FBDFF;
+            color: rgb(11, 14, 14);
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #afe81fd6;
+            padding: 1em;
+        }
+
+        nav a {
+            margin-right: 1em;
+            text-decoration: none;
+            color: #240628;
+            display: inline-block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #notificationDropdown {
+            display: none;
+            position: absolute;
+            background-color: hwb(145 5% 6% / 0.683);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 50px; 
+            right: 10px; 
+        }
+
+        #notificationDropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #notificationDropdown a:hover {
+            background-color: #ddd;
+        }
+
+        #notificationBtn {
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            background-color: #afe81fd6;
+            color: rgb(11, 14, 14);
+            display: inline-block; 
+        }
+
+        #registration {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #registration label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #registration input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        #registerBtn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #successMessage {
+            display: none;
+            padding: 20px;
+            background-color: #2ecc71;
+            color: #ffffff;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
