@@ -1,132 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #C5FFF8;
-            text-align: center; 
-        }
-
-        header {
-            background-color: #5FBDFF;
-            color: rgb(11, 14, 14);
-            padding: 1em;
-            
-        }
-
-        nav {
-            background-color: #afe81fd6;
-            padding: 1em;
-        }
-
-        nav a {
-            margin-right: 1em;
-            text-decoration: none;
-            color: #240628;
-            display: inline-block;
-        }
-
-        
-
-        
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            bottom: 0;
-            width: 100%;
-            position:fixed;
-        }
-        #notificationDropdown {
-            display: none;
-            position: absolute;
-            background-color: hwb(145 5% 6% / 0.683);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            top: 50px; /* Adjust the distance from the button */
-            right: 10px; /* Adjust the distance from the button */
-        }
-
-        #notificationDropdown a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        #notificationDropdown a:hover {
-            background-color: #ddd;
-        }
-
-        /* Style for the notification button */
-        #notificationBtn {
-            cursor: pointer;
-            position: relative;
-            padding: 10px;
-            background-color: #afe81fd6;
-            color: rgb(11, 14, 14);
-        }
-        /* Add the following styles to your existing CSS */
-
-        /* Style for the notification button */
-        #notificationBtn {
-        cursor: pointer;
-        position: relative;
-        padding: 10px;
-        background-color: #afe81fd6;
-        color: rgb(11, 14, 14);
-        display: inline-block; /* Align the button horizontally */
-        }
-
-/* Adjust the position of the dropdown */
-#notificationDropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 40px; /* Adjust the distance from the button */
-    right: 10px; /* Adjust the distance from the button */
-    width: 200px; /* Adjust the width of the dropdown if needed */
-}
-
-#assurance {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            font-size: 18px;
-            text-align: center;
-        }
-
-        #assurance p {
-            margin-bottom: 20px;
-        }
-
-        #assurance input {
-            margin-right: 5px;
-        }
-
-        #submitBtn {
-            margin-top: 10px;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #3498db;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesins.css">
 </head>
 <body>
     <header>
@@ -140,18 +18,13 @@
         <a href="./diag.html">Diagnosis</a>
         <a href="./Chatbot.html">Chatbot</a>
         <a href="./appo.html">Appointments</a>
-        <!-- Replace the href value with "#" to prevent the page from reloading -->
         <div id="notificationBtn">Notifications</div>
-        <!-- Add a container for the notification dropdown -->
         <div id="notificationDropdown">
-            <!-- Add dynamic content for notifications here -->
             <a href="#">Medicine Due: Aspirin on DD/MM/YYYY</a>
             <a href="#">Appointment: Dr. Smith on DD/MM/YYYY</a>
-            <!-- Add more notifications as needed -->
         </div>
         <a href="./ins.html">Insurance</a>
     </nav>
-
 
     <div id="assurance">
         <p>Do you want insurance?</p>
@@ -167,38 +40,6 @@
         <p>&copy; 2023 Hospital Management System</p>
     </footer>
 
-    <script>
-        // Get the notification button and dropdown
-        var notificationBtn = document.getElementById('notificationBtn');
-        var notificationDropdown = document.getElementById('notificationDropdown');
-
-        // Toggle visibility of the notification dropdown
-        notificationBtn.addEventListener('click', function() {
-            notificationDropdown.style.display = (notificationDropdown.style.display === 'block') ? 'none' : 'block';
-        });
-
-        // Close the notification dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (event.target !== notificationBtn && event.target !== notificationDropdown && !notificationDropdown.contains(event.target)) {
-                notificationDropdown.style.display = 'none';
-            }
-        };
-
-        function handleInsuranceResponse() {
-            var yesCheckbox = document.getElementById('yesCheckbox');
-            var noCheckbox = document.getElementById('noCheckbox');
-
-            if (yesCheckbox.checked) {
-                // Redirect to another page for insurance
-                window.location.href = "insurance.html";
-            } else if (noCheckbox.checked) {
-                // Display a message for "No" response
-                alert("Ok, thank you for your response.");
-            } else {
-                // Handle the case where neither checkbox is checked
-                alert("Please select an option.");
-            }
-        }
-    </script>
+    <script src="scriptins.js"></script>
 </body>
 </html>
